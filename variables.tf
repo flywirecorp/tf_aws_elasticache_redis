@@ -59,8 +59,9 @@ variable "redis_failover" {
   default = false
 }
 
-variable "multi_az_enabled" {
-  type    = bool
+variable "is_migration_cluster" {
+  description = "Specifies whether this is a cluster for replicating other EC2 redis. Useful for migrations."
+  type = bool
   default = false
 }
 
