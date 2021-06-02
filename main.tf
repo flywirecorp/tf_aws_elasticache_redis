@@ -26,6 +26,10 @@ resource "aws_elasticache_replication_group" "redis" {
   snapshot_window               = var.redis_snapshot_window
   snapshot_retention_limit      = var.redis_snapshot_retention_limit
   tags                          = merge(map("Name", format("tf-elasticache-%s-%s", var.name, lookup(data.aws_vpc.vpc.tags, "Name", ""))), var.tags)
+
+  lifecycle {
+    ignore_changes = ["replication_group_id"]
+  }
 }
 
 resource "aws_elasticache_parameter_group" "redis_parameter_group" {
