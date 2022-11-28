@@ -3,7 +3,7 @@ terraform {
 }
 
 provider "aws" {
-  version = "~> 3.31"
+  version = "~> 4.12"
 }
 
 provider "random" {
