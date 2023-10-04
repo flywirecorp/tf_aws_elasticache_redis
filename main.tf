@@ -12,9 +12,6 @@ resource "random_id" "salt" {
     redis_version = "${var.redis_version}"
   }
   byte_length = 8
-  keepers = {
-    redis_version = var.redis_version
-  }
 }
 
 resource "aws_elasticache_replication_group" "redis" {
