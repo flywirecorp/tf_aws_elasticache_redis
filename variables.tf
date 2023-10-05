@@ -49,20 +49,20 @@ variable "redis_clusters" {
 
 variable "multi_az_enabled" {
   description = "Specifies whether to enable Multi-AZ Support for the replication group"
-  type = bool
-  default = false
+  type        = bool
+  default     = false
 }
 
 variable "redis_failover" {
   description = "Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails"
-  type    = bool
-  default = false
+  type        = bool
+  default     = false
 }
 
 variable "is_migration_cluster" {
   description = "Specifies whether this is a cluster for replicating other EC2 redis. Useful for migrations."
-  type = bool
-  default = false
+  type        = bool
+  default     = false
 }
 
 variable "redis_node_type" {
