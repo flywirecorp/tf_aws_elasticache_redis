@@ -111,12 +111,12 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_endpoint"></a> [endpoint](#output\_endpoint) | n/a |
-| <a name="output_id"></a> [id](#output\_id) | n/a |
-| <a name="output_parameter_group"></a> [parameter\_group](#output\_parameter\_group) | n/a |
-| <a name="output_port"></a> [port](#output\_port) | n/a |
-| <a name="output_redis_security_group_id"></a> [redis\_security\_group\_id](#output\_redis\_security\_group\_id) | n/a |
-| <a name="output_redis_subnet_group_name"></a> [redis\_subnet\_group\_name](#output\_redis\_subnet\_group\_name) | n/a |
+| <a name="output_endpoint"></a> [endpoint](#output\_endpoint) | Redis endpoint address |
+| <a name="output_id"></a> [id](#output\_id) | ID of the Redis replication group |
+| <a name="output_parameter_group"></a> [parameter\_group](#output\_parameter\_group) | ID of the Parameter Group to control the runtime properties of Redis nodes and clusters |
+| <a name="output_port"></a> [port](#output\_port) | Redis port (default is 6379) |
+| <a name="output_redis_security_group_id"></a> [redis\_security\_group\_id](#output\_redis\_security\_group\_id) | ID of the managed Security Group generated for Redis |
+| <a name="output_redis_subnet_group_name"></a> [redis\_subnet\_group\_name](#output\_redis\_subnet\_group\_name) | Name of the Redis subnet |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
