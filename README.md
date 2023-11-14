@@ -9,15 +9,16 @@ This module is forked from [tf_aws_elasticache_redis Communitiy module](https://
 
 ## Terraform versions
 
-Terraform 0.12. Pin module version to `~> v2.0`. Submit pull-requests to `master` branch.
+Terraform 1.3 used in master branch.
+Check version tags for older versions.
 
-Terraform 0.11. Pin module version to `~> v1.0`. Submit pull-requests to `terraform011` branch.
+
 
 ## Usage
 
 ```hcl
 module "redis" {
-  source  = "github.com/flywirecorp/tf_aws_elasticache_redis.git?ref=v2.2.0"
+  source  = "github.com/flywirecorp/tf_aws_elasticache_redis.git?ref=v2.3.0"
 
   env            = "dev"
   name           = "thtest"
@@ -44,15 +45,15 @@ module "redis" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.12 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 4.12 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5 |
 | <a name="provider_random"></a> [random](#provider\_random) | ~> 3.1 |
 
 ## Modules
@@ -117,9 +118,6 @@ No modules.
 | <a name="output_port"></a> [port](#output\_port) | Redis port (default is 6379) |
 | <a name="output_redis_security_group_id"></a> [redis\_security\_group\_id](#output\_redis\_security\_group\_id) | ID of the managed Security Group generated for Redis |
 | <a name="output_redis_subnet_group_name"></a> [redis\_subnet\_group\_name](#output\_redis\_subnet\_group\_name) | Name of the Redis subnet |
-
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Authors
 
 Created by [Tim Hartmann](https://github.com/tfhartmann). Maintained by [Anton Babenko](https://github.com/antonbabenko) and [these awesome contributors](https://github.com/terraform-community-modules/tf_aws_elasticache_redis/graphs/contributors).
