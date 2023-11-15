@@ -16,7 +16,7 @@ Check version tags for older versions.
 
 ```hcl
 module "redis" {
-  source  = "github.com/flywirecorp/tf_aws_elasticache_redis.git?ref=v2.3.1"
+  source  = "github.com/flywirecorp/tf_aws_elasticache_redis.git?ref=v3.0.0"
 
   env            = "dev"
   name           = "thtest"
