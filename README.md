@@ -116,6 +116,9 @@ No modules.
 | <a name="output_port"></a> [port](#output\_port) | Redis port (default is 6379) |
 | <a name="output_redis_security_group_id"></a> [redis\_security\_group\_id](#output\_redis\_security\_group\_id) | ID of the managed Security Group generated for Redis |
 | <a name="output_redis_subnet_group_name"></a> [redis\_subnet\_group\_name](#output\_redis\_subnet\_group\_name) | Name of the Redis subnet |
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Authors
 
 Created by [Tim Hartmann](https://github.com/tfhartmann). Maintained by [Anton Babenko](https://github.com/antonbabenko) and [these awesome contributors](https://github.com/terraform-community-modules/tf_aws_elasticache_redis/graphs/contributors).
