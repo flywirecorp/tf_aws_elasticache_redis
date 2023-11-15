@@ -12,13 +12,11 @@ This module is forked from [tf_aws_elasticache_redis Communitiy module](https://
 Terraform 1.3 used in master branch.
 Check version tags for older versions.
 
-
-
 ## Usage
 
 ```hcl
 module "redis" {
-  source  = "github.com/flywirecorp/tf_aws_elasticache_redis.git?ref=v2.3.0"
+  source  = "github.com/flywirecorp/tf_aws_elasticache_redis.git?ref=v2.3.1"
 
   env            = "dev"
   name           = "thtest"
@@ -47,14 +45,14 @@ module "redis" {
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.1 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.5 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5 |
-| <a name="provider_random"></a> [random](#provider\_random) | ~> 3.1 |
+| <a name="provider_random"></a> [random](#provider\_random) | ~> 3.5 |
 
 ## Modules
 
