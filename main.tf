@@ -4,6 +4,8 @@ data "aws_vpc" "vpc" {
 
 locals {
   vpc_name               = lookup(data.aws_vpc.vpc.tags, "Name", var.vpc_id)
+  trimmed_name_env       = format("%.20s", "${var.name}-${var.env}")    # trim name-env to 20 char
+  name_env               = replace(local.trimmed_name_env, "/-+$/", "") # remove trailing hyphens
   major_redis_version    = parseint(substr(var.redis_version, 0, 1), 10)
   parameter_group_family = local.major_redis_version < 6 ? "redis${replace(var.redis_version, "/\\.[\\d]+$/", "")}" : local.major_redis_version == 6 ? "redis${replace(var.redis_version, "/\\.[\\d|x]+$/", "")}.x" : "redis${local.major_redis_version}"
 }
@@ -16,7 +18,7 @@ resource "random_id" "salt" {
 }
 
 resource "aws_elasticache_replication_group" "redis" {
-  replication_group_id        = format("%.20s", "${var.name}-${var.env}")
+  replication_group_id        = local.name_env
   description                 = "Terraform-managed ElastiCache replication group for ${var.name}-${var.env}-${local.vpc_name}"
   num_cache_clusters          = var.redis_clusters
   node_type                   = var.redis_node_type
